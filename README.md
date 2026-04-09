@@ -1,34 +1,29 @@
-# Virusinjection
-🧬 FiveM Virus Injection Script
+🧬 VirusInjection
 
-A simple, standalone virus system for FiveM that lets players infect others with a syringe-style command.
-
-No framework needed. Just drop it in and it works.
+Standalone infection system for FiveM with staged effects, animations, and full progression to death.
 
 ✨ Features
 💉 Inject nearby players using /inject
 🎲 Configurable infection chance (default: 60%)
-🧪 3-stage infection system:
-Stage 1 → vomiting + itching
-Stage 2 → frequent sickness + fainting
-Stage 3 → heavy effects, screen shake, blackout, death
-🎭 Animations for both injector and target
-⚡ Fully standalone (no ESX / QB / ox required)
-🔧 Easy config
+🧪 Advanced 3-stage infection system
+Stage 1: nausea + itching
+Stage 2: recurring sickness + fainting
+Stage 3: severe effects, screen shake, blackout, death
+🎭 Synced animations (injector & target)
+⚡ Fully standalone (no ESX / QB / dependencies)
+🔧 Simple and easy configuration
 📦 Installation
-Download or clone this repo
-
-Put it in your resources folder:
-
+# 1. Place resource
 resources/[local]/injecter
 
-Add to your server.cfg:
-
+# 2. Add to server.cfg
 ensure injecter
-Restart your server
-⚙️ Config
 
-Located in config.lua
+Restart your server and you're good to go.
+
+⚙️ Configuration
+
+All settings are located in config.lua:
 
 Config.InjectCommand = "inject"
 Config.InjectDistance = 2.0
@@ -38,40 +33,40 @@ Config.Stage1Time = 120
 Config.Stage2Time = 180
 Config.Stage3DeathTime = 120
 🎮 Usage
-Inject a player
+Inject a Player
 /inject
 Targets the closest player
 Plays injection animation
-Applies infection (based on chance)
-Test on yourself
+Applies infection based on chance
+Self Test
 /testvirus
-🧪 Infection System
-Stage 1
+🧪 Infection Stages
+🟢 Stage 1
 Vomiting
 Itching
-Stage 2
-Vomiting every minute
+🟡 Stage 2
+Vomiting every 60 seconds
 Itching
 Fainting every 5 minutes
-Stage 3
+🔴 Stage 3
 Screen shake
-Heavy effects
+Heavy visual effects
 Passing out
 Death
-📁 Structure
+📁 Resource Structure
 injecter/
-│── fxmanifest.lua
-│── config.lua
-│── client.lua
-│── server.lua
+├── fxmanifest.lua
+├── config.lua
+├── client.lua
+└── server.lua
 ⚠️ Notes
-Script is standalone
+Completely standalone
 No database required
-No dependencies
+No external dependencies
 Works on any FiveM server
-🔧 Ideas / Future Updates
+🔧 Planned Improvements
 💉 Syringe item instead of command
 💊 Antidote / cure system
-🧍 Infection spreading between players
-🫀 Better medical animations
-📊 UI / status effects
+🧍 Infection spread system
+🫀 Improved medical animations
+📊 UI / status indicators  
